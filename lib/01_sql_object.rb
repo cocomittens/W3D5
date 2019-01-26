@@ -14,12 +14,12 @@ class SQLObject
 
   def self.table_name=(table_name)
     # ...
-    self.table_name = "#{@table_name}"
+     self.instance_variable_set("@#{table_name}", table_name)
   end
 
   def self.table_name
     # ...
-
+    
   end
 
   def self.all
